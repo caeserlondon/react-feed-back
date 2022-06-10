@@ -1,7 +1,13 @@
-import React from 'react'
+import Header from './components/Header'
+import FeedBackItem from './components/FeedBackItem'
 
 const App = () => {
-	return <h1>Feed Back UI</h1>
+	return (
+		<>
+			<Header />
+			<FeedBackItem />
+		</>
+	)
 }
 
 export default App
