@@ -1,6 +1,10 @@
 import FeedbackItem from './FeedbackItem'
+import { useContext } from 'react'
+import FeedbackContext from './context/FeedbackContext'
 
-const FeedbackList = ({ feedback, handleDelete }) => {
+const FeedbackList = () => {
+	const { feedback } = useContext(FeedbackContext)
+
 	if (!feedback || feedback.length === 0) {
 		return <h1 style={{ color: 'darkorange' }}>No Feedback Yet</h1>
 	}
@@ -8,7 +12,7 @@ const FeedbackList = ({ feedback, handleDelete }) => {
 	return (
 		<div className='feedback-list'>
 			{feedback.map((item) => (
-				<FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
+				<FeedbackItem key={item.id} item={item} />
 			))}
 		</div>
 	)
