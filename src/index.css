@@ -6,6 +6,11 @@
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: orange;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #b8b8be;
@@ -166,4 +171,42 @@ input:focus {
 .btn:disabled:hover {
 	transform: scale(1);
 	opacity: 1;
+}
+
+.message {
+	padding-top: 10px;
+	text-align: center;
+	color: orange;
+}
+
+[type='radio'] {
+	opacity: 0;
+}
+
+[type='radio']:checked ~ label {
+	background: orange;
+	color: #fff;
+}
+
+.about-link {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.about-link a {
+	color: orange;
+
+	cursor: pointer;
+}
+
+.about-link a:hover {
+	color: olive;
+}
+
+.about h2 {
+	margin-bottom: 20px;
+}
+
+.about p {
+	margin: 10px 0;
 }
