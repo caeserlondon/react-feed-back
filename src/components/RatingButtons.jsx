@@ -1,8 +1,4 @@
-import { useState } from 'react'
-
-const RatingSelect = ({ select }) => {
-	const [selected] = useState()
-
+const RatingSelect = ({ select, selected }) => {
 	const handleChange = (e) => {
 		select(+e.currentTarget.value)
 	}

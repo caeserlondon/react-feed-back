@@ -39,7 +39,10 @@ const FeedbackForm = ({ handleAdd }) => {
 		<Card>
 			<form onSubmit={handleSubmit}>
 				<h2>How would you rate our service?</h2>
-				<RatingButtons select={(rating) => setRating(rating)} />
+				<RatingButtons
+					select={(rating) => setRating(rating)}
+					selected={rating}
+				/>
 				<div className='input-group'>
 					<input
 						onChange={handleTextChange}
