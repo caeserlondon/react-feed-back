@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const RatingSelect = ({ select }) => {
-	const [selected, setSelected] = useState()
+	const [selected] = useState()
 
 	const handleChange = (e) => {
 		select(+e.currentTarget.value)
