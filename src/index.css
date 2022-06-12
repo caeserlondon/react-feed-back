@@ -207,6 +207,11 @@ input:focus {
 .about p {
 	margin: 10px 0;
 }
+.spinner {
+	width: 150px;
+	margin: auto;
+	display: block;
+}
 
 @media (max-width: 600px) {
 	.rating li {
