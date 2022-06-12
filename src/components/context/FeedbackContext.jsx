@@ -1,16 +1,19 @@
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import FeedbackData from '../../data/FeedbackData'
 
 const FeedbackContext = createContext()
 
 export const FeedbackProvider = ({ children }) => {
-	const [feedback, setFeedback] = useState([
-		{
-			id: 1,
-			text: 'this text is from context',
-			rating: 10,
-		},
-	])
+	const [feedback, setFeedback] = useState([])
+
+	useEffect(() => {
+		fetchFeedback()
+	}, [])
+
+	const fetchFeedback = () => {
+		setFeedback(FeedbackData)
+	}
 
 	const deleteFeedback = (id) => {
 		if (window.confirm('Are you sure you want to delete this review ?')) {
