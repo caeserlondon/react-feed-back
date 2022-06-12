@@ -1,4 +1,5 @@
-import FeedbackItem from '../components/FeedbackItem'
+// import FeedbackItem from '../components/FeedbackItem'
+import FeedbackItem from './FeedbackItem'
 import { useContext } from 'react'
 import FeedbackContext from './context/FeedbackContext'
 
